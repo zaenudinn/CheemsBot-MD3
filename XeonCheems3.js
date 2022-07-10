@@ -238,7 +238,7 @@ const isUser = pendaftar.includes(m.sender)
 const isBan = banUser.includes(m.sender)
 const isBanChat = m.isGroup ? banchat.includes(from) : false
 const isRakyat = isCreator || global.rkyt.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
-const AntiLink = m.isGroup ? ntilink.includes(from) : false
+const AntiLink = m.isGroup ? ntilink.includes(from) : true
 const AntiLinkYoutubeVid = m.isGroup ? ntilinkytvid.includes(from) : false
 const AntiLinkYoutubeChannel = m.isGroup ? ntilinkytch.includes(from) : false
 const AntiLinkInstagram = m.isGroup ? ntilinkig.includes(from) : false
@@ -819,7 +819,7 @@ user.afkReason = ''
 
 // Detect Group Invite
 if (m.mtype === 'groupInviteMessage') {
-teks = `Type .owner to join your whatsapp group`
+teks = `Ketik .owner untuk bergabung dengan grup whatsapp Anda`
 sendOrder(m.chat, teks, "5123658817728409", fs.readFileSync('./XeonMedia/theme/cheemspic.jpg'), `${watermark}`, `${botname}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
 /*const bodyyy = (m.mtype === 'conversation') ? m.message.conversation : (m.mtype == 'imageMessage') ? m.message.imageMessage.caption : (m.mtype == 'videoMessage') ? m.message.videoMessage.caption : (m.mtype == 'extendedTextMessage') ? m.message.extendedTextMessage.text : (m.mtype == 'buttonsResponseMessage') ? m.message.buttonsResponseMessage.selectedButtonId : (m.mtype == 'listResponseMessage') ? m.message.listResponseMessage.singleSelectReply.selectedRowId : (m.mtype == 'templateButtonReplyMessage') ? m.message.templateButtonReplyMessage.selectedId : (m.mtype === 'messageContextInfo') ? (m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text) : ''
@@ -833,15 +833,15 @@ await XeonBotInc.sendMessage(from, {text:sami}, {quoted:m})
 if (AntiLink) {
 linkgce = await XeonBotInc.groupInviteCode(from)
 if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
-reply(`\`\`\`「 Group Link Detected 」\`\`\`\n\nYou won't be kicked by a bot because what you send is a link to this group`)
+reply(`\`\`\`「 Group Link Detected 」\`\`\`\n\nAnda tidak akan ditendang oleh bot karena yang Anda kirim adalah tautan ke grup ini`)
 } else if (isUrl(m.text)) {
-bvl = `\`\`\`「 Group Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to post any link`
+bvl = `\`\`\`「 Group Link Detected 」\`\`\`\n\n Admin telah mengirim tautan, admin bebas memposting tautan apa pun`
 if (isAdmins) return reply(bvl)
 if (m.key.fromMe) return reply(bvl)
 if (isCreator) return reply(bvl)
 kice = m.sender
 await XeonBotInc.groupParticipantsUpdate(m.chat, [kice], 'remove').then((res) => reply(jsonformat(res))).catch((err) => reply(jsonformat(err)))
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Group Link Detected 」\`\`\`\n\n@${kice.split("@")[0]} Telah ditendang karena mengirim tautan di grup ini`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
 } else {
 }
 }
@@ -2651,7 +2651,7 @@ if (isBanChat) return reply(mess.banChat)
                 ]
                 let buttonMessage = {
                     text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
-                    footer: 'Press The Button Below',
+                    footer: 'Tekan Tombol Di Bawah',
                     buttons: buttons,
                     headerType: 2
                 }
@@ -2724,7 +2724,7 @@ if (isBanChat) return reply(mess.banChat)
       {
        text: "Group Settings",
        footer: botname,
-       title: "Set your group settings here......",
+       title: "Atur pengaturan grup Anda di sini......",
        buttonText: "Click Button",
        sections
       }, { quoted : m }
@@ -2747,7 +2747,7 @@ if (isBanChat) return reply(mess.banChat)
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: `Here you go!`,
+                    caption: `*ArullOfc!*`,
                     footer: `${botname}`,
                     buttons: buttons,
                     headerType: 4
@@ -3893,7 +3893,7 @@ if (isBanChat) return reply(mess.banChat)
 let user = global.db.users[m.sender]
 user.afkTime = + new Date
 user.afkReason = args.join(" ")
-replay(`${m.pushName} has gone afk\nReason : ${args.join(" ") ? args.join(" ") : ''}`)
+replay(`${m.pushName} telah pergi\nAlasan : ${args.join(" ") ? args.join(" ") : ''}`)
 }
 break
 case 'setcmd': case 'addcmd': {
@@ -4187,16 +4187,16 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLink) return replay('Already activated')
+if (AntiLink) return replay('Telah diaktifkan')
 ntilink.push(from)
-replay('Success in turning on group chat antilink in this group')
+replay('Berhasil mengaktifkan antilink chat grup di grup ini')
 var groupe = await XeonBotInc.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nIf you're not an admin, don't send the group link in this group or u will be kicked immediately`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+XeonBotInc.sendMessage(from, {text: `\`\`\`「 ⚠️Warning⚠️ 」\`\`\`\n\nJika Anda bukan admin, jangan kirim tautan grup di grup ini atau Anda akan langsung ditendang`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!AntiLink) return replay('Already deactivated')
 let off = ntilink.indexOf(from)
@@ -4587,7 +4587,7 @@ case 'ban': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!args[0]) return replay(`Select add or del(add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user u want to ban`)
+if (!args[0]) return replay(`Pilih tambah atau del (tambahkan ke larangan, del untuk membatalkan larangan), Misalnya: Balas *${prefix}blokir tambahkan* ke pengguna yang ingin Anda blokir`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -4595,14 +4595,14 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('User was already banned')
+if (isBane) return ads('Pengguna sudah dilarang')
 banUser.push(orgnye)
-replay(`Successfully banned the user`)
+replay(`Berhasil memblokir pengguna`)
 } else if (args[0] === "del") {
-if (!isBane) return ads('User was already unbanned')
+if (!isBane) return ads('Pengguna sudah dibatalkan pemblokirannya')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user`)
+replay(`Berhasil membatalkan pemblokiran pengguna`)
 } else {
 replay("Error")
 }
@@ -4874,7 +4874,7 @@ case 'chatinfo': {
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) replay('Reply Message')
 let msg = await m.getQuotedObj()
-if (!m.quoted.isBaileys) return replay('The message was not sent by a bot!')
+if (!m.quoted.isBaileys) return replay('Pesan itu tidak dikirim oleh bot!')
 let teks = ''
 for (let i of msg.userReceipt) {
 let read = i.readTimestamp
