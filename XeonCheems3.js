@@ -8820,7 +8820,7 @@ break
 				let buttons = [
                     { buttonId: 'Start', buttonText: { displayText: 'Start 🚶' }, type: 1 }
                 ]
-                XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hai ${await XeonBotInc.getName(m.sender)} Selamat Datang di Obrolan Anonim\n\nKlik Tombol Di Bawah Untuk Menemukan Partner\`\`\``, XeonBotInc.user.name, m)
+                XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Hai ${await XeonBotInc.getName(m.sender)} Selamat Datang di Obrolan Anonim\n\nKlik Tombol Di Bawah Untuk Menemukan Partner\`\`\`, XeonBotInc.user.name, m)
             }
 			break
             case 'keluar': case 'leave': {
@@ -8833,7 +8833,7 @@ break
                     let buttons = [
                         { buttonId: 'start', buttonText: { displayText: 'Start 🚶' }, type: 1 }
                     ]
-                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Anda Tidak Dalam Sesi Anonim, Tekan Tombol Untuk Menemukan Partner \`\`\``)
+                    await XeonBotInc.sendButtonText(m.chat, buttons, `\`\`\`Anda Tidak Dalam Sesi Anonim, Tekan Tombol Untuk Menemukan Partner \`\`\`)
                    reply(false)
                 }
                 reply('Ok')
