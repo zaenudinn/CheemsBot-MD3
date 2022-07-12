@@ -144,7 +144,7 @@ XeonBotInc.ev.on('group-participants.update', async (anu) => {
                 xeonbody = `
 𝗪𝗲𝗹𝗰𝗼𝗺𝗲 @${xeonName.split("@")[0]}
 ✑𝗝𝗼𝗶𝗻 𝘁𝗼: ${metadata.subject}
-✑𝗝𝘂𝗺𝗹𝗮𝗵 𝗠𝗲𝗺𝗯𝗲𝗿: ${xmembers}th
+✑𝗝𝘂𝗺𝗹𝗮𝗵 𝗠𝗲𝗺𝗯𝗲𝗿: ${xmembers}Member
 ✑𝗧𝗶𝗺𝗲: ${xtime} ${xdate}`
    //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
@@ -181,9 +181,9 @@ XeonBotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
                     const xeonmembers = metadata.participants.length
                     let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "916909137213-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'xeon', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                     xeonbody = `
-𝗚𝗼𝗼𝗱𝗯𝘆𝗲 @${xeonName.split("@")[0]}  」
+𝗚𝗼𝗼𝗱𝗯𝘆𝗲 @${xeonName.split("@")[0]}
 ✑𝗟𝗲𝗳𝘁 𝗗𝗮𝗿𝗶: ${metadata.subject}
-✑𝗦𝗶𝘀𝗮 𝗠𝗲𝗺𝗯𝗲𝗿: ${xeonmembers}th
+✑𝗦𝗶𝘀𝗮 𝗠𝗲𝗺𝗯𝗲𝗿: ${xeonmembers}Member
 ✑𝗧𝗶𝗺𝗲: ${xeontime} ${xeondate}`
       //if you copy the code value,
    //dont forget to put my name(Xeon) as credit
@@ -204,7 +204,7 @@ buttons: buttons,
 headerType: 4,
 contextInfo:{externalAdReply:{
 title: `${ownername}`,
-body: `Selamat tinggal! temanku, hati-hati.`,
+body: `Selamat tinggal!Jangan Lupa Menangis.`,
 mediaType:2,
 thumbnail: buffer,
 sourceUrl: `${websitex}`,
