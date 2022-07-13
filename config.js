@@ -42,8 +42,8 @@ global.ownertag = ['ArullOfc'] //ur owner tag
 global.ownernummenu = ['6285822347348'] //ur owner number in menu and all
 global.watermark = "ArullBotz" //ur watermark
 global.botscript = "https://youtu.be/Gr6yuCbSGTI"
-global.linkz1 = "https://chat.whatsapp.com/GdXv5LxKfDPHJ4WOH2rNu5"
-global.linkz2 = "https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg"
+global.linkz1 = "https://youtu.be/Gr6yuCbSGTI"
+global.linkz2 = "https://chat.whatsapp.com/F6CAAOhrORm1sPdq6cRKASl"
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
