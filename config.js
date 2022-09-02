@@ -24,26 +24,26 @@ global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
 //owmner v card
-global.owner = ['6285822347348'] //ur owner number
-global.ownername = "ArullOfc"
-global.ytname = "YT:ARULL OFC " //ur yt chanel name
-global.socialm = "GitHub: Warikrr" //ur github or insta name
+global.owner = ['6285779150501'] //ur owner number
+global.ownername = "RanggaOfc"
+global.ytname = "YT:RANGGA OFC " //ur yt chanel name
+global.socialm = "GitHub: XiaomiBOT" //ur github or insta name
 global.location = "Indonesia, Kalimantan Selatan, Kotabaru" //ur location
 
 //bot bombdy
-global.botname = "ArullBotz" //ur bot name
-global.websitex = "https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg" //ur website
+global.botname = "RanggaBotz" //ur bot name
+global.websitex = "https://youtube.com/channel/UCkiB1g5qA7xtd7AlXd46vcw" //ur website
 global.vidmenu = { url: 'https://a.uguu.se/eFNTvNt.mp4' } //gif and video menu
 global.packname = "Sticker By"
-global.author = "ArullBotz"
+global.author = "XiaomiBotz"
 global.themeemoji = "📀"
 global.reactmoji = "🗿"
-global.ownertag = ['ArullOfc'] //ur owner tag
-global.ownernummenu = ['6285822347348'] //ur owner number in menu and all
-global.watermark = "ArullBotz" //ur watermark
+global.ownertag = ['RanggaOfc'] //ur owner tag
+global.ownernummenu = ['6285779150501'] //ur owner number in menu and all
+global.watermark = "XiaomiBotz" //ur watermark
 global.botscript = "https://youtu.be/Gr6yuCbSGTI"
-global.linkz1 = "https://youtu.be/Gr6yuCbSGTI"
-global.linkz2 = "https://chat.whatsapp.com/F6CAAOhrORm1sPdq6cRKASl"
+global.linkz1 = "https://youtu.be/sRVKK2CxmjA"
+global.linkz2 = "https://chat.whatsapp.com/DcIcuTKGWSm1pxBVc9pgvR"
 
 //Bot theme media
 global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
