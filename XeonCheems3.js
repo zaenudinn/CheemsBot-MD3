@@ -1379,7 +1379,7 @@ message: {
                 },
 	 message: { 
                  "videoMessage": { 
-                 "title": `Xeon`,
+                 "title": `Xiaomi`,
                  "h": `Xeon`,
                  'duration': '99999', 
                  'gifPlayback': 'true', 
@@ -1649,7 +1649,7 @@ body: "Click to Subscribe",
 thumbnail: fs.readFileSync("XeonMedia/theme/cheemspic.jpg"),
 mediaType:1,
 mediaUrl: 'https://telegra.ph/file/298ba283af16b6a0ac3c5.jpg',
-sourceUrl: "https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg"
+sourceUrl: "https://youtube.com/channel/UCkiB1g5qA7xtd7AlXd46vcw"
 }}
 }
 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -1721,13 +1721,13 @@ if (isBanChat) return reply(mess.banChat)
 reply(` Don't forget to join yeah!
 
 *GROUP 1*
-https://chat.whatsapp.com/F6CAAOhrORm1sPdq6cRKASl
+https://chat.whatsapp.com/CxhaZtrxdn4AfSUOHuCtcM
 
 *GROUP 2*
-https://chat.whatsapp.com/GdXv5LxKfDPHJ4WOH2rNu5l
+https://chat.whatsapp.com/GmV8DKxGXTDIeF8Y13vzds
 
 *GROUP 3*
-https://chat.whatsapp.com/GdXv5LxKfDPHJ4WOH2rNu5l`)
+https://chat.whatsapp.com/JCgXlfkzK6p6xIYk5ij0Pa`)
 break
 case 'getsxvdxcmd': {
 if (isBan) return reply(mess.ban)	 			
@@ -2747,7 +2747,7 @@ if (isBanChat) return reply(mess.banChat)
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: `*ArullOfc!*`,
+                    caption: `*HanzOfc!*`,
                     footer: `${botname}`,
                     buttons: buttons,
                     headerType: 4
