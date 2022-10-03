@@ -46,10 +46,10 @@ global.linkz1 = "https://youtu.be/sRVKK2CxmjA"
 global.linkz2 = "https://chat.whatsapp.com/CxhaZtrxdn4AfSUOHuCtcM"
 
 //Bot theme media
-global.thum = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
-global.log0 = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur logo pic
-global.err4r = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur error pic
-global.thumb = fs.readFileSync("./XeonMedia/theme/cheemspic.jpg") //ur thumb pic
+global.thum = fs.readFileSync("./XeonMedia/theme/20221004_050215.jpg") //ur thumb pic
+global.log0 = fs.readFileSync("./XeonMedia/theme/20221004_050215.jpg") //ur logo pic
+global.err4r = fs.readFileSync("./XeonMedia/theme/20221004_050215.jpg") //ur error pic
+global.thumb = fs.readFileSync("./XeonMedia/theme/20221004_050215.jpg") //ur thumb pic
 
 //database
 global.ntilinkytvid = []
